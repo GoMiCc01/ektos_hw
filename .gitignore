@@ -1,0 +1,8 @@
+.vscode/
+lecture_2_hw/ending_analizer
+lecture_2_hw/ending_testint
+lecture_3_hw/binary_output
+*.o
+*.out
+*.app
+.DS_Store
