@@ -6,3 +6,4 @@ lecture_3_hw/binary_output
 *.out
 *.app
 .DS_Store
+eim_config.toml
