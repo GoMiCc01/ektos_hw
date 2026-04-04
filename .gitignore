@@ -3,6 +3,7 @@ lecture_2_hw/ending_analizer
 lecture_2_hw/ending_testint
 lecture_3_hw/binary_output
 lecture_4/logical_and_bit_oper_demo
+lecture_5_hw/homework
 *.o
 *.out
 *.app
