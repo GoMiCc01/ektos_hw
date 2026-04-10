@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdint.h>
 
-static inline void separator(void)
+static void separator(void)
 {
-    printf("==================================================================\n");
+    puts("==================================================================\n");
 }
 
 // task 2 ............................................................................
@@ -167,22 +167,22 @@ void shift_demo(void)
 
 int main(void)
 {
-    // Це завдання нам демонструє як формуються від'ємні числа а саме інверсія + 1
+    // This task demonstrates us the transformation of negative numbers, specifically inversion plus one
     print_binary_my_age();
     separator();
-    // Це завдання нам демонструє як відбувається переповнення знакових чисел та як формуються від'ємні числа при цьому переповненні
+    // This task demonstrates the overflow of signed numbers and how negative numbers are formed during this overflow
     add_age_demo();
     separator();
-    // Це завдання нам демонструє як відбувається переповнення беззнакових чисел
+    // This task demonstrates the overflow of unsigned numbers
     add_age_demo_unsigned();
     separator();
-    // Це завдання нам демонструє як встановити та скинути певний біт у числі за допомогою маски
+    // This task demonstrates how to set and reset a specific bit in a number using a mask
     task4_demo();
     separator();
-    // Це завдання нам демонструє як за допомогою операції XOR можна змінювати стан певного біта наприклад для керування світлодіодом
+    // This task demonstrates how to change the state of a specific bit using the XOR operation, for example, to control an LED
     blinking_xor();
     separator();
-    // Це завдання нам демонструє як працюють операції зсуву вліво та вправо для знакових та беззнакових чисел
+    // This task demonstrates how left and right shift operations work for signed and unsigned numbers
     shift_demo();
     return 0;
 }
