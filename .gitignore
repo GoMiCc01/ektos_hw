@@ -4,6 +4,10 @@ lecture_2_hw/ending_testint
 lecture_3_hw/binary_output
 lecture_4_hw/logical_and_bit_oper_demo
 lecture_5_hw/homework
+lecture_7_hw/homework
+lecture_7_hw/Makefile
+lecture_8_hw/homework
+lecture_8_hw/Makefile
 *.o
 *.out
 *.app
