@@ -8,6 +8,10 @@ lecture_7_hw/homework
 lecture_7_hw/Makefile
 lecture_8_hw/homework
 lecture_8_hw/Makefile
+Simple_blink_nucleo_f446re/
+!Simple_blink_nucleo_f446re/Core/
+!Simple_blink_nucleo_f446re/Core/Src/
+!Simple_blink_nucleo_f446re/Core/Src/main.c
 *.o
 *.out
 *.app
