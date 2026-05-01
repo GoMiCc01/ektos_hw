@@ -14,6 +14,11 @@ Simple_blink_nucleo_f446re/Core/*
 !Simple_blink_nucleo_f446re/Core/Src/
 Simple_blink_nucleo_f446re/Core/Src/*
 !Simple_blink_nucleo_f446re/Core/Src/main.c
+
+Simple_blink_empty_nucleo_f446re/*
+!Simple_blink_empty_nucleo_f446re/Src/
+Simple_blink_empty_nucleo_f446re/Src/*
+!Simple_blink_empty_nucleo_f446re/Src/main.c
 *.o
 *.out
 *.app
