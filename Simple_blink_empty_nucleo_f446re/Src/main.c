@@ -24,6 +24,26 @@
   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
 #endif
 
+
+#define STK_CTRL  (*((volatile uint32_t*)0xE000E010))	/*A control and status register. This configures the SysTick clock,
+ 	 	 	 	 	 	 	 	 	 	 	 	 	 	 enables the counter, enables the SysTick interrupt, and indicates the counter status*/
+
+#define STK_LOAD  (*((volatile uint32_t*)0xE000E014))	//A counter reload value register. This provides the wrap value for the counter.
+#define STK_VAL   (*((volatile uint32_t*)0xE000E018))	//A counter current value register.
+
+void delay_ms(uint32_t ms) {
+
+    STK_LOAD = 16000 - 1;	// 16 000 000 / 1000 (how many clocks in 1 ms)
+    STK_VAL  = 0;	// to clear counter value
+    STK_CTRL = 0x5;	//0 bit - Indicates the enabled status of the SysTick counter , bit 2 - SysTick uses the processor clock
+
+    for (uint32_t i = 0; i < ms; i++) {
+        while (!(STK_CTRL & (1 << 16))); //16 bit indicates countdown end
+    }
+
+    STK_CTRL = 0;
+}
+
 int main(void)
 {
 	// 0x40023800 rcc , enables peripherals
@@ -34,6 +54,6 @@ int main(void)
 	*((volatile uint32_t*)0x40020000) &= ~(1<<11); // set 11 bit 0, now gpioa is an output pin
 	while(1){
         *((volatile uint32_t*)0x40020014) ^= (1 << 5); // toggle 5th bit
-        for(volatile int i = 0; i < 5000000; i++);	//delay
+        delay_ms(2000);	//delay
 	}
 }
