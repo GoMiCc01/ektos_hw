@@ -43,6 +43,7 @@ Shield_toggle_led/Core/*
 Shield_toggle_led/Core/Src/*
 !Shield_toggle_led/Core/Src/main.c
 
+UART_Testing/*
 *.o
 *.out
 *.app
