@@ -50,6 +50,20 @@ UART_Testing/Core/*
 UART_Testing/Core/Src/*
 !UART_Testing/Core/Src/main.c
 
+Black_pill_I2C_slave_testing/*
+!Black_pill_I2C_slave_testing/Core/
+Black_pill_I2C_slave_testing/Core/*
+!Black_pill_I2C_slave_testing/Core/Src/
+Black_pill_I2C_slave_testing/Core/Src/*
+!Black_pill_I2C_slave_testing/Core/Src/main.c
+
+I2c_Testing/*
+!I2c_Testing/Core/
+I2c_Testing/Core/*
+!I2c_Testing/Core/Src/
+I2c_Testing/Core/Src/*
+!I2c_Testing/Core/Src/main.c
+
 .settings/
 *.o
 *.out
